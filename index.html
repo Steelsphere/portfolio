@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #292929;
+}
+h1 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.1rem;
+    color: #E0E0E0;
+    margin: 15px 0;
+}
+img {
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.05);
+}
+.header, .description, .links {
+    text-align:center;
+}
+.container {
+    background-color: #1E1E1E;
+    border-radius: 15px;
+    border: none;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 25px;
+}
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #4CAF50;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} 
+</style>
+</head>
+
+<body>
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <a href="#gbs">GBS</a>
+        <a href="#ao">At Odds</a>
+        <a href="#croc">Crocodinosaur</a>
+        <a href="#chem">Chemtrails</a>
+        <a href="#terrain">Terrain</a>
+        <a href="#grav">Gravity</a>
+    </div>
+
+    <div class="main">
+        
+        <div id="gbs" class="container">
+            <div class="header">
+                <h1>Guns, Blocks, and Steel</h1>
+            </div>
+
+            <div class="links">
+            <a href="https://store.steampowered.com/app/3161460/Guns_Blocks_and_Steel/">Steam</a>
+            </div>
+
+            <div class="description">
+                <p>A voxel-based multiplayer FPS game with fully destructible terrain and procedural generation. The multiplayer uses a client-server architecture with an authoritative server and client-side prediction. Made with Unity.</p>
+                <img src="gbs.png" width="50%">
+                <img src="gbs2.png" width="50%">
+                <img src="gbs3.png" width="50%">
+            </div>
+        </div>
+
+        <div id="ao" class="container">
+            <div class="header">
+                <h1>At Odds</h1>
+            </div>
+
+            <div class="links">
+                <a href="https://peoplepancakes.itch.io/at-odds">Itch.io</a>
+                <a href="https://github.com/pancakespeople/At-Odds">Github</a>
+            </div>
+
+            <div class="description">
+                <p>A space 4X/RTS game. Made with C++. Source code is available.</p>
+                <img src="ao1.png" width="50%">
+                <img src="ao2.png" width="50%">
+                <img src="ao3.png" width="50%">
+                <img src="ao4.png" width="50%">
+            </div>
+        </div>
+
+        <div id="croc" class="container">
+            <div class="header">
+                <h1>Crocodinosaur</h1>
+            </div>
+
+            <div class="links">
+                <a href="https://silver4.itch.io/crocodinosaur">Itch.io</a>
+            </div>
+
+            <div class="description">
+                <p>An action platformer where you play as a Crocodinosaur who grows bigger by eating people. Made by a team of a programmer and artist with Unity in 4 days for a game jam.</p>
+                <img src="crocodinosaur.png">
+                <iframe frameborder="0" loading="lazy" src="https://itch.io/embed-upload/11236014?color=44baff" allowfullscreen="" width="960" height="620"><a href="https://silver4.itch.io/crocodinosaur">Play Crocodinosaur on itch.io</a></iframe>
+            </div>
+        </div>
+
+        <div id="chem" class="container">
+            <div class="header">
+                <h1>Chemtrails</h1>
+            </div>
+
+            <div class="links">
+                <a href="https://silver4.itch.io/chemtrails">Itch.io</a>
+            </div>
+
+            <div class="description">
+                <p>A flight game where the goal is to drop Mind Control chemicals on dissidents. Made in 3 days for a game jam.</p>
+                <img src="chemtrails.png" width="50%">
+                <iframe frameborder="0" loading="lazy" src="https://itch.io/embed-upload/11011259?color=000000" allowfullscreen="" width="960" height="660"><a href="https://silver4.itch.io/chemtrails">Play Chemtrails on itch.io</a></iframe>
+            </div>
+        </div>
+
+        <div id="terrain" class="container">
+            <div class="header">
+                <h1>Terrain</h1>
+            </div>
+
+            <div class="description">
+                <p>C++ OpenGL project to visualize heightmaps.</p>
+                <img src="heightmap.png" width="50%">
+            </div>
+        </div>
+    
+        <div id="grav" class="container">
+            <div class="header">
+                <h1>Gravity Simulator</h1>
+            </div>
+
+            <div class="description">
+                <p>Basic gravity simulation project in C++.</p>
+                <img src="gravsim.png" width="50%">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html> 
