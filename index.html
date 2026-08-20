@@ -5,16 +5,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+@font-face {
+  font-family: "Audiowide";
+  src: url("/fonts/Audiowide-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Audiowide", sans-serif;
     line-height: 1.6;
     margin: 0;
     background-color: #292929;
+    background-image: url("img/space_background_seamless.png");
 }
 h1 {
     font-size: 2rem;
     color: #4CAF50;
     margin-bottom: 10px;
+    -webkit-text-stroke: 1px rgb(0, 70, 128);
 }
 p {
     font-size: 1.1rem;
@@ -24,14 +34,11 @@ p {
 img {
     transition: transform 0.3s ease;
 }
-img:hover {
-    transform: scale(1.05);
-}
 .header, .description, .links {
     text-align:center;
 }
 .container {
-    background-color: #1E1E1E;
+    background-color: rgba(30, 30, 30, 0.75);
     border-radius: 15px;
     border: none;
     padding: 20px;
@@ -45,7 +52,7 @@ img:hover {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: rgba(10, 10, 10, 0.75);
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -53,13 +60,17 @@ img:hover {
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     color: #4CAF50;
     display: block;
 }
 
 .sidenav a:hover {
     color: #f1f1f1;
+}
+
+.sidenav h1 {
+    text-align: center;
 }
 
 .main {
@@ -77,16 +88,75 @@ img:hover {
 <body>
     <!-- Side navigation -->
     <div class="sidenav">
+        <h1>Games</h1>
+        <a href="#gal">GalactiWar</a>
+        <a href="#exo">Exodus</a>
+        <a href="#www">WWW</a>
         <a href="#gbs">GBS</a>
         <a href="#ao">At Odds</a>
         <a href="#croc">Crocodinosaur</a>
         <a href="#chem">Chemtrails</a>
+        <h1>Other</h1>
         <a href="#terrain">Terrain</a>
         <a href="#grav">Gravity</a>
     </div>
 
     <div class="main">
         
+        <div id="gal" class="container">
+            <div class="header">
+                <h1>GalactiWar - Empire Simulator</h1>
+            </div>
+
+            <div class="links">
+            <a href="https://silver4.itch.io/galactiwar-empire-simulator">Itch.io</a>
+            <a href="https://silver4.itch.io/galactiwar-empire-simulator">Steam</a>
+            </div>
+
+            <div class="description">
+                <p>My best game so far. A sandbox space empire simulator. The second game I released on Steam.</p>
+                
+                <img src="img/galactiwar_steam.png" width="70%">
+                <img src="img/galactiwar1.png" width="70%">
+                <img src="img/galactiwar-gif.gif" width="70%">
+            </div>
+        </div>
+
+        <div id="exo" class="container">
+            <div class="header">
+                <h1>Exodus</h1>
+            </div>
+
+            <div class="links">
+            <a href="https://silver4.itch.io/exodus">Itch.io</a>
+            </div>
+
+            <div class="description">
+                <p>Tower defense sort of game made in 96 hours with Godot.</p>
+                
+                <img src="img/exodus_gameplay.png" width="70%">
+                <img src="img/exodus_gif.gif" width="70%">
+            </div>
+        </div>
+
+        <div id="www" class="container">
+            <div class="header">
+                <h1>World War Web</h1>
+            </div>
+
+            <div class="links">
+            <a href="https://silver4.itch.io/world-war-web">Itch.io</a>
+            </div>
+
+            <div class="description">
+                <p>Spider Roguelike!</p>
+                
+                <img src="img/www1.png" width="70%">
+                <img src="img/www2.png" width="70%">
+                <img src="img/www3.png" width="70%">
+            </div>
+        </div>
+
         <div id="gbs" class="container">
             <div class="header">
                 <h1>Guns, Blocks, and Steel</h1>
@@ -97,7 +167,7 @@ img:hover {
             </div>
 
             <div class="description">
-                <p>A voxel-based multiplayer FPS game with fully destructible terrain and procedural generation. The multiplayer uses a client-server architecture with an authoritative server and client-side prediction. Made with Unity.</p>
+                <p>Multiplayer FPS block game made with Unity. The first game I released on Steam.</p>
                 
                 <!-- Trailer embed -->
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/bdPAtUG7RU0?si=5NPecnPd5VvRVNNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -139,7 +209,6 @@ img:hover {
             <div class="description">
                 <p>An action platformer where you play as a Crocodinosaur who grows bigger by eating people. Made by a team of a programmer and artist with Unity in 4 days for a game jam.</p>
                 <img src="img/crocodinosaur.png">
-                <iframe frameborder="0" loading="lazy" src="https://itch.io/embed-upload/11236014?color=44baff" allowfullscreen="" width="960" height="620"><a href="https://silver4.itch.io/crocodinosaur">Play Crocodinosaur on itch.io</a></iframe>
             </div>
         </div>
 
@@ -155,7 +224,6 @@ img:hover {
             <div class="description">
                 <p>A flight game where the goal is to drop Mind Control chemicals on dissidents. Made in 3 days for a game jam.</p>
                 <img src="img/chemtrails.png" width="50%">
-                <iframe frameborder="0" loading="lazy" src="https://itch.io/embed-upload/11011259?color=000000" allowfullscreen="" width="960" height="660"><a href="https://silver4.itch.io/chemtrails">Play Chemtrails on itch.io</a></iframe>
             </div>
         </div>
 
